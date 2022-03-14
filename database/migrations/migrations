@@ -1,0 +1,48 @@
+GERAR_HONORARIO
+    $table->string("ident_empresa", 14);
+    $table->string("cep", 8);
+    $table->string("ident_cliente", 14);
+    $table->integer("valor");
+    $table->date("data_ref");
+
+    $table->primary(['ident_empresa', 'cep', 'ident_cliente']);
+
+    $table->foreign('ident_empresa')->references('ident_empresa')->on('empresa');
+    $table->foreign('cep')->references('cep')->on('localizacao');
+    $table->foreign('ident_cliente')->references('ident_cliente')->on('cliente');
+    $table->foreign('valor')->references('valor')->on('cliente');
+
+    $table->timestamps();
+
+
+CLIENTE
+    $table->string("ident_cliente", 14);
+    $table->integer("valor");
+    $table->string("razao_social", 100);
+    $table->string("descricao", 100);
+    $table->string("natureza_juridica", 50);
+
+    $table->primary(["ident_cliente", "valor"]);
+    $table->timestamps();
+
+
+EMPRESA
+    $table->string("ident_empresa", 14);
+    $table->string("cep", 8);
+    $table->string("nome", 50);
+
+    $table->primary(["ident_empresa", "cep"]);
+    $table->foreign("cep")->references("cep")->on("localizacao");
+    $table->timestamps();
+
+
+LOCALIZACAO
+    $table->string("cep", 8);
+    $table->primary("cep");
+
+    $table->string("uf", 2);
+    $table->string("cidade", 50);
+    $table->string("bairro", 50);
+    $table->string("rua", 50);
+    $table->integer("numero");
+    $table->timestamps();
