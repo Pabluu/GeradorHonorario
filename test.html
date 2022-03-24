@@ -1,0 +1,38 @@
+@extends("templates.init")
+
+@section("formulario")
+<form method="GET" action="">
+    <div class="card">
+        <h1>Entrar</h1>
+
+        <div class="label-float">
+            <i class="bi bi-person-circle">
+                <input type="text" placeholder="Usuário" />
+            </i>
+        </div>
+
+        <div class="label-float">
+            <i class="bi bi-lock-fill">
+                <input type="password" placeholder="Senha" />
+            </i>
+        </div>
+
+        <div class="justify-center">
+            <button type="button" class="btn btn-danger">Entrar</button>
+
+        </div>
+
+        <div class="justify-center">
+            <hr>
+        </div>
+
+        <div>
+            <label>Não tem uma conta?
+                <a href="/create" class="link-primary">Cadastre-se</a>
+            </label>
+        </div>
+
+    </div>
+</form>
+
+@endsection

@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="{{url(mix('te/css/style.css'))}}">
+    <link rel="stylesheet" href="{{url(mix('site/css/style.css'))}}">
 </head>
 
 <body>
