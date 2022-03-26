@@ -15,8 +15,14 @@
 <body>
     <div class="container">
         @yield("titulo")
-        @yield("formulario")
-        @yield("mensagem")
+
+        <div class="card">
+            @yield("formulario")
+            </div>
+            
+        <div class="pos-card">
+            @yield("mensagem")
+        </div>
     </div>
 </body>
 
