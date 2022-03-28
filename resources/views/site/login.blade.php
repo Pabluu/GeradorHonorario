@@ -23,10 +23,10 @@
     </div>    
 </form>
 @endsection
-<!-- 
+
 @section('mensagem')
     <div class="signup">
         Novo aqui? 
-        <a href="#" class="link-primary col-5'">Crie uma conta</a>
+        <a href="/create" class="link-primary col-5'">Crie uma conta</a>
     </div>
-@endsection -->
+@endsection
